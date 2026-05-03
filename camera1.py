@@ -13,16 +13,16 @@ out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (frame_width, frame_height))
 while True:
     ret, frame = cam.read()
 
-    # Write the frame to the output file
+    
     out.write(frame)
 
-    # Display the captured frame
+    
     cv2.imshow('Camera', frame)
 
     if cv2.waitKey(1) == ord('q'):
         break
 
-# Release the capture and writer objects
+
 cam.release()
 out.release()
 cv2.destroyAllWindows()
